@@ -52,7 +52,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             Container(
               padding: EdgeInsets.all(10),
-              color: Colors.pink.shade200,
+              color: Colors.red.shade200,
               child: Text(
                 'ihtiyacınız olan bölümler nelerdir ufak anket tarzı bir şey yapılabilir burada',
                 textAlign: TextAlign.center,
@@ -62,6 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
             ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -69,18 +70,43 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   onPressed: () {
                     // Handle skip
                   },
-                  child: Text('Skip'),
+                  child: Text(
+                      'Skip',
+                    style: TextStyle(
+                      fontSize: 20, //We set the size
+                    )
+                  ),
+
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.red.shade300,
+                    primary: Colors.red.shade200,
+                    onPrimary : Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 42, vertical: 12), // Increase padding
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero, // Set border radius to zero for rectangular buttons
+                    ),
                   ),
                 ),
+
+
                 ElevatedButton(
                   onPressed: () {
                     // Handle next
                   },
-                  child: Text('Next'),
+                  child: Text(
+                      'Next',
+                  style: TextStyle(
+                    fontSize: 20, //We set the size
+                  )
+                  ),
+
                   style: ElevatedButton.styleFrom(
+
                     primary: Colors.red.shade300,
+                    onPrimary : Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 42, vertical: 12), // Increase padding
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero, // Set border radius to zero for rectangular buttons
+                    ),
                   ),
                 ),
               ],
