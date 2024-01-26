@@ -34,22 +34,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            SizedBox(height: 60),
+            SizedBox(height: 100),
             Text(
               'hello!',
               style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
-                color: Colors.red.shade300,
+                color: Colors.white,
               ),
             ),
-            SizedBox(height: 180), // provides spacing between text widgets
+            SizedBox(height: 150), // provides spacing between text widgets
             Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.red.shade200,
+                color: Colors.white,
               ),
             ),
             SizedBox(height: 200), // provides spacing between text widgets
