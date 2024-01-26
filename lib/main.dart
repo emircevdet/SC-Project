@@ -32,16 +32,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            SizedBox(height: 60),
             Text(
               'hello!',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
                 color: Colors.red.shade300,
               ),
             ),
+            SizedBox(height: 180), // provides spacing between text widgets
             Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
               textAlign: TextAlign.center,
@@ -50,6 +52,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 color: Colors.red.shade200,
               ),
             ),
+            SizedBox(height: 200), // provides spacing between text widgets
             Container(
               padding: EdgeInsets.all(10),
               color: Colors.red.shade200,
@@ -62,7 +65,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
             ),
-
+            Expanded(
+              child: Container(), // This will push the Row of buttons to the bottom
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -71,38 +76,33 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     // Handle skip
                   },
                   child: Text(
-                      'Skip',
+                    'Skip',
                     style: TextStyle(
-                      fontSize: 20, //We set the size
-                    )
+                      fontSize: 20, // We set the size
+                    ),
                   ),
-
                   style: ElevatedButton.styleFrom(
                     primary: Colors.red.shade200,
-                    onPrimary : Colors.white,
+                    onPrimary: Colors.white,
                     padding: EdgeInsets.symmetric(horizontal: 42, vertical: 12), // Increase padding
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.zero, // Set border radius to zero for rectangular buttons
                     ),
                   ),
                 ),
-
-
                 ElevatedButton(
                   onPressed: () {
                     // Handle next
                   },
                   child: Text(
-                      'Next',
-                  style: TextStyle(
-                    fontSize: 20, //We set the size
-                  )
+                    'Next',
+                    style: TextStyle(
+                      fontSize: 20, // We set the size
+                    ),
                   ),
-
                   style: ElevatedButton.styleFrom(
-
                     primary: Colors.red.shade300,
-                    onPrimary : Colors.white,
+                    onPrimary: Colors.white,
                     padding: EdgeInsets.symmetric(horizontal: 42, vertical: 12), // Increase padding
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.zero, // Set border radius to zero for rectangular buttons
@@ -111,6 +111,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ],
             ),
+            SizedBox(height: 20), // Add space at the bottom if necessary
           ],
         ),
       ),
