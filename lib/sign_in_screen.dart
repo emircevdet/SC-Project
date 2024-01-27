@@ -73,6 +73,7 @@ class SignInScreen extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.red.shade400,
                     decoration: TextDecoration.underline,
+                    decorationColor: Colors.red.shade400,
 
               ),
             ),
@@ -86,9 +87,9 @@ class SignInScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 primary: Colors.red.shade300,
                 onPrimary: Colors.white,
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: EdgeInsets.symmetric(vertical: 13),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(15),
                 ),
               ),
             ),
@@ -104,12 +105,14 @@ class SignInScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 primary: Colors.red.shade300,
                 onPrimary: Colors.white,
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: EdgeInsets.symmetric(vertical: 13),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)
+                  borderRadius: BorderRadius.circular(15)
                 ),
               ),
             ),
+
+            SizedBox(height: 7),//gap
 
             ElevatedButton(
               onPressed: () {
@@ -119,9 +122,10 @@ class SignInScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 primary: Colors.red.shade300,
                 onPrimary: Colors.white,
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: EdgeInsets.symmetric(vertical: 13),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(15),
+
                 ),
               ),
             ),
