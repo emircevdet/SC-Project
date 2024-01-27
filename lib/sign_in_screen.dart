@@ -114,21 +114,26 @@ class SignInScreen extends StatelessWidget {
 
             SizedBox(height: 7),//gap
 
-            ElevatedButton(
+            ElevatedButton.icon(
+              icon:Image.asset(
+                'images/googlelogo.jpg', // Path to your Google logo asset
+                height: 24.0, // Set the size as needed
+                width: 24.0, // Set the size as needed
+              ),
+              label: Text('Sign in with Google'),
               onPressed: () {
                 // Handle "Sign in with Google" tap
               },
-              child: Text('Sign in with Google'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.red.shade300,
                 onPrimary: Colors.white,
-                padding: EdgeInsets.symmetric(vertical: 13),
+                padding: EdgeInsets.symmetric(vertical: 13, horizontal: 24),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
-
                 ),
               ),
             ),
+
             SizedBox(height: 20),
             Text(
               'By proceeding you also agree to the Terms of Service and Privacy Policy',
