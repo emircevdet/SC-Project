@@ -24,19 +24,22 @@ class SignInScreen extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               'Sign In Heading',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.red.shade400),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 10),
             Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis pellentesque metus id lacinia.',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16, color: Colors.white),
+              style: TextStyle(fontSize: 16, color: Colors.red.shade400),
             ),
             SizedBox(height: 30),
             TextField(
               decoration: InputDecoration(
-                labelText: 'Email',
+                labelText: 'Email*',
+                labelStyle: TextStyle(
+                  color: Colors.red.shade400, //We set the color
+                ),
                 filled: true,
                 fillColor: Colors.white.withOpacity(0.8),
                 border: OutlineInputBorder(
@@ -49,7 +52,10 @@ class SignInScreen extends StatelessWidget {
             TextField(
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Password',
+                labelText: 'Password*',
+                labelStyle: TextStyle(
+                  color: Colors.red.shade400, // we set the color again
+                ),
                 filled: true,
                 fillColor: Colors.white.withOpacity(0.8),
                 border: OutlineInputBorder(
@@ -64,9 +70,13 @@ class SignInScreen extends StatelessWidget {
               },
               child: Text(
                 'I forgot my password',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(
+                    color: Colors.red.shade400,
+                    decoration: TextDecoration.underline,
+
               ),
             ),
+          ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -75,6 +85,7 @@ class SignInScreen extends StatelessWidget {
               child: Text('Log in'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.red.shade300,
+                onPrimary: Colors.white,
                 padding: EdgeInsets.symmetric(vertical: 12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
@@ -82,8 +93,24 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Text('OR', textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
+            Text('OR', textAlign: TextAlign.center, style: TextStyle(color: Colors.red.shade400)),
             SizedBox(height: 20),
+
+            ElevatedButton(
+                onPressed: (){
+                  //Handle sign in
+                },
+              child: Text('Sign in'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red.shade300,
+                onPrimary: Colors.white,
+                padding: EdgeInsets.symmetric(vertical: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8)
+                ),
+              ),
+            ),
+
             ElevatedButton(
               onPressed: () {
                 // Handle "Sign in with Google" tap
@@ -91,6 +118,7 @@ class SignInScreen extends StatelessWidget {
               child: Text('Sign in with Google'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.red.shade300,
+                onPrimary: Colors.white,
                 padding: EdgeInsets.symmetric(vertical: 12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
@@ -101,7 +129,7 @@ class SignInScreen extends StatelessWidget {
             Text(
               'By proceeding you also agree to the Terms of Service and Privacy Policy',
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 14),
+              style: TextStyle(color: Colors.red.shade400, fontSize: 14),
             ),
           ],
         ),
