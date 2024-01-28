@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solution_challenge/sign_in_screen.dart';
+import 'package:solution_challenge/sign_up_screen.dart';
 import 'sign_in_screen.dart';
 
 void main() {
@@ -77,7 +78,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SignInScreen()),
+                      MaterialPageRoute(builder: (context) => SignUpScreen()),
                     );// Handle skip
                   },
                   child: Text(
@@ -99,7 +100,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SignInScreen()),
+                      MaterialPageRoute(builder: (context) => SignUpScreen()),
                     );
                   },
                   child: Text(
