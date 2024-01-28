@@ -85,9 +85,10 @@ class SignInScreen extends StatelessWidget {
               },
               child: Text('Log in'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.red.shade300,
+                primary: Colors.redAccent.shade200,
                 onPrimary: Colors.white,
                 padding: EdgeInsets.symmetric(vertical: 13),
+                side: BorderSide(color: Colors.white, width: 2.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -103,9 +104,10 @@ class SignInScreen extends StatelessWidget {
                 },
               child: Text('Sign in'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.red.shade300,
+                primary: Colors.redAccent.shade200,
                 onPrimary: Colors.white,
                 padding: EdgeInsets.symmetric(vertical: 13),
+                side: BorderSide(color: Colors.white, width: 2.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)
                 ),
@@ -114,25 +116,44 @@ class SignInScreen extends StatelessWidget {
 
             SizedBox(height: 7),//gap
 
-            ElevatedButton.icon(
-              icon:Image.asset(
-                'images/googlelogo.jpg', // Path to your Google logo asset
-                height: 24.0, // Set the size as needed
-                width: 24.0, // Set the size as needed
-              ),
-              label: Text('Sign in with Google'),
+            ElevatedButton(
               onPressed: () {
                 // Handle "Sign in with Google" tap
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.red.shade300,
-                onPrimary: Colors.white,
-                padding: EdgeInsets.symmetric(vertical: 13, horizontal: 24),
+                primary: Colors.redAccent.shade200, // Button background color
+                onPrimary: Colors.white, // Text color
+                padding: EdgeInsets.symmetric(vertical: 13, horizontal: 24), // Add horizontal padding
+                side: BorderSide(color: Colors.white, width: 2.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
+                minimumSize: Size(double.infinity, 50), // make button width as large as possible
+              ),
+              child: Stack(
+                alignment: Alignment.center,
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Image.asset(
+                      'images/googlelogo.jpg', // Path to your Google logo asset
+                      height: 24.0, // Set the size as needed
+                      width: 24.0, // Set the size as needed
+                    ),
+                  ),
+                  Text(
+                    'Sign in with Google',
+                    style: TextStyle(
+                      fontSize: 16, // Set the font size as needed
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
             ),
+
+
+
 
             SizedBox(height: 20),
             Text(
