@@ -22,49 +22,113 @@ class SignUpScreen extends StatelessWidget {
         ),
         child: ListView( // Use ListView for better handling of keyboard appearance
           children: <Widget>[
-            SizedBox(height: 20),
-            Text(
-              'Sign In Heading',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.red.shade400),
-              textAlign: TextAlign.center,
-            ),
+
             SizedBox(height: 10),
-            Text(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis pellentesque metus id lacinia.',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16, color: Colors.red.shade400),
-            ),
-            SizedBox(height: 30),
             TextField(
               decoration: InputDecoration(
-                labelText: 'Name*',
+                labelText: '  Name*',
                 labelStyle: TextStyle(
                   color: Colors.red.shade400, //We set the color
                 ),
                 filled: true,
                 fillColor: Colors.white.withOpacity(0.8),
+                contentPadding: EdgeInsets.symmetric(vertical: 17),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide.none,
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Last Name*',
+                labelText: '  Last Name*',
                 labelStyle: TextStyle(
                   color: Colors.red.shade400, // we set the color again
                 ),
                 filled: true,
                 fillColor: Colors.white.withOpacity(0.8),
+                contentPadding: EdgeInsets.symmetric(vertical: 17),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide.none,
                 ),
               ),
             ),
+
+            SizedBox(height: 10),
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: '  Email*',
+                labelStyle: TextStyle(
+                  color: Colors.red.shade400, // we set the color again
+                ),
+                filled: true,
+                fillColor: Colors.white.withOpacity(0.8),
+                contentPadding: EdgeInsets.symmetric(vertical: 17),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide.none,
+                ),
+              ),
+            ),
+
+            SizedBox(height: 10),
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: '  Birthday*',
+                labelStyle: TextStyle(
+                  color: Colors.red.shade400, // we set the color again
+                ),
+                filled: true,
+                fillColor: Colors.white.withOpacity(0.8),
+                contentPadding: EdgeInsets.symmetric(vertical: 17),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide.none,
+                ),
+              ),
+            ),
+
+            SizedBox(height: 10),
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: '  Password*',
+                labelStyle: TextStyle(
+                  color: Colors.red.shade400, // we set the color again
+                ),
+                filled: true,
+                fillColor: Colors.white.withOpacity(0.8),
+                contentPadding: EdgeInsets.symmetric(vertical: 17),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide.none,
+                ),
+              ),
+            ),
+
+            SizedBox(height: 10,),
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: '  Confirm Password*',
+                labelStyle: TextStyle(
+                  color: Colors.red.shade400, // we set the color again
+                ),
+                filled: true,
+                fillColor: Colors.white.withOpacity(0.8),
+                contentPadding: EdgeInsets.symmetric(vertical: 17), // Reduced vertical padding
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide.none,
+                ),
+              ),
+            ),
+
             TextButton(
               onPressed: () {
                 Navigator.push(
@@ -85,7 +149,7 @@ class SignUpScreen extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Handle "Log in" tap
+                // Handle "Sign in" tap
               },
               child: Text('Sign Up'),
               style: ElevatedButton.styleFrom(
@@ -98,12 +162,11 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
             ),
+
             SizedBox(height: 20),
             Text('OR', textAlign: TextAlign.center, style: TextStyle(color: Colors.red.shade400)),
             SizedBox(height: 20),
 
-
-            SizedBox(height: 7),//gap
 
             ElevatedButton(
               onPressed: () {
