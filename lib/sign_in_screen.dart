@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class SignInScreen extends StatelessWidget {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +38,7 @@ class SignInScreen extends StatelessWidget {
             ),
             SizedBox(height: 30),
             TextField(
+              controller: _emailController,
               decoration: InputDecoration(
                 labelText: 'Email*',
                 labelStyle: TextStyle(
@@ -51,6 +54,7 @@ class SignInScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             TextField(
+              controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password*',
@@ -118,7 +122,19 @@ class SignInScreen extends StatelessWidget {
             SizedBox(height: 7),//gap
 
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
+                try {
+                  final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+                    email: _emailController.text, // Controller'dan e-posta değerini al
+                    password: _passwordController.text, // Controller'dan parola değerini al
+                  );
+                } on FirebaseAuthException catch (e) {
+                  if (e.code == 'user-not-found') {
+                    print('No user found for that email.');
+                  } else if (e.code == 'wrong-password') {
+                    print('Wrong password provided for that user.');
+                  }
+                }
                 // Handle "Sign in with Google" tap
               },
               style: ElevatedButton.styleFrom(
