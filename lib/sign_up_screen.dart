@@ -49,7 +49,6 @@ class SignUpScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             TextField(
-              obscureText: true,
               decoration: InputDecoration(
                 labelText: '  Last Name*',
                 labelStyle: TextStyle(
@@ -68,7 +67,6 @@ class SignUpScreen extends StatelessWidget {
             SizedBox(height: 10),
             TextField(
               controller: _emailController,
-              obscureText: true,
               decoration: InputDecoration(
                 labelText: '  Email*',
                 labelStyle: TextStyle(
@@ -86,7 +84,6 @@ class SignUpScreen extends StatelessWidget {
 
             SizedBox(height: 10),
             TextField(
-              obscureText: true,
               decoration: InputDecoration(
                 labelText: '  Birthday*',
                 labelStyle: TextStyle(
