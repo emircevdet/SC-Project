@@ -4,6 +4,10 @@ import 'package:solution_challenge/sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class SignUpScreen extends StatelessWidget {
+  // Controller'lar form alanlarından veri almak için kullanılır
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  // Diğer controller'lar burada tanımlanabilir
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +27,9 @@ class SignUpScreen extends StatelessWidget {
         ),
         child: ListView( // Use ListView for better handling of keyboard appearance
           children: <Widget>[
+
+
+
 
             SizedBox(height: 10),
             TextField(
@@ -60,6 +67,7 @@ class SignUpScreen extends StatelessWidget {
 
             SizedBox(height: 10),
             TextField(
+              controller: _emailController,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: '  Email*',
@@ -96,6 +104,7 @@ class SignUpScreen extends StatelessWidget {
 
             SizedBox(height: 10),
             TextField(
+              controller: _passwordController,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: '  Password*',
@@ -149,8 +158,23 @@ class SignUpScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                // Handle "Sign in" tap
+              onPressed: () async {
+                try {
+                  final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                    email: _emailController.text, // Controller'dan e-posta değerini al
+                    password: _passwordController.text, // Controller'dan parola değerini al
+                  );
+                  // ... başarılı kayıt işlemi sonrası yapılacak işlemler
+                } on FirebaseAuthException catch (e) {
+                  if (e.code == 'weak-password') {
+                    print('The password provided is too weak.');
+                  } else if (e.code == 'email-already-in-use') {
+                    print('The account already exists for that email.');
+                  }
+                } catch (e) {
+                  print(e);
+                }
+                // Handle "Sign up" tap
               },
               child: Text('Sign Up'),
               style: ElevatedButton.styleFrom(
@@ -171,7 +195,7 @@ class SignUpScreen extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-                // Handle "Sign in with Google" tap
+                // Handle "Sign up with Google" tap
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.redAccent.shade200, // Button background color
