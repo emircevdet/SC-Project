@@ -3,9 +3,15 @@ import 'package:solution_challenge/sign_in_screen.dart';
 import 'package:solution_challenge/sign_up_screen.dart';
 import 'sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+
+
+void main() async {
   runApp(MyApp());
+}
+
+class DefaultFirebaseOptions {
 }
 
 class MyApp extends StatelessWidget {
