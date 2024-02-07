@@ -9,6 +9,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Bu satırı ekleyin
+  await Firebase.initializeApp(); // Firebase'i başlatın
   runApp(MyApp());
 }
 
