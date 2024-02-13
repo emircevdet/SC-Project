@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:solution_challenge/sign_in_screen.dart';
-import 'package:solution_challenge/sign_up_screen.dart';
+import 'package:solution_challenge/user_auth/pages/sign_in_screen.dart';
+import 'package:solution_challenge/user_auth/pages/sign_up_screen.dart';
 import 'sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
