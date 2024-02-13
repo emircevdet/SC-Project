@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:solution_challenge/sign_in_screen.dart';
 import 'package:solution_challenge/sign_up_screen.dart';
 import 'sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
-
+import 'firebase_options.dart';
+//1//09yWpAu_0EB8hCgYIARAAGAkSNwF-L9IroY6iwE2dWaYt5OYGuNlIwQhpCmbuaP0pk9f7D9iqKx1Y3eddISTQN0f3bdWngSvIp-E
+GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: <String>[
+    'email',
+    'https://www.googleapis.com/auth/contacts.readonly'
+  ]
+);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Bu satırı ekleyin
-  await Firebase.initializeApp(); // Firebase'i başlatın
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  ); // Firebase'i başlatın
   runApp(MyApp());
 }
 
