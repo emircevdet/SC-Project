@@ -6,7 +6,7 @@ import 'sign_in_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'firebase_options.dart';
+//import 'firebase_options.dart';
 //1//09yWpAu_0EB8hCgYIARAAGAkSNwF-L9IroY6iwE2dWaYt5OYGuNlIwQhpCmbuaP0pk9f7D9iqKx1Y3eddISTQN0f3bdWngSvIp-E
 GoogleSignIn _googleSignIn = GoogleSignIn(
   scopes: <String>[
@@ -18,7 +18,7 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // Bu satırı ekleyin
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+   // options: DefaultFirebaseOptions.currentPlatform,
   ); // Firebase'i başlatın
   runApp(MyApp());
 }
