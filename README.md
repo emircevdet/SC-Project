@@ -9,7 +9,8 @@ The purpose of this project is to address one of the fundamental challenges face
 ## App Photos
 
 ## About
-![1.png](..%2FOneDrive%2FMasa%FCst%FC%2FTogetHER%2F1.png)
+![1](https://github.com/emircevdet/SC-Project/assets/145847994/272f2b13-81c6-478f-8cfb-70cc686847a7)
+
 
 ## Contributors
 |[Karahan Yavuz Kara](https://github.com/karahanyavuzkara)|[Emir Cevdet Ünsal](https://github.com/emircevdet)|[Bilge Kurtaslan](https://github.com/wreelds)|[Doruk İskenderoğlu](https://github.com/DorukIskenderoglu)|
