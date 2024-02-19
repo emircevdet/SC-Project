@@ -13,9 +13,9 @@ The purpose of this project is to address one of the fundamental challenges face
 
 
 ## Contributors
-|[Karahan Yavuz Kara](https://github.com/karahanyavuzkara)| [Emir Cevdet Ünsal](https://github.com/emircevdet)| [Bilge Kurtaslan](https://github.com/wreelds)|[Doruk İskenderoğlu](https://github.com/DorukIskenderoglu)|
-|---|---|---|---|
-|| <img height="200" src="https://avatars.githubusercontent.com/u/145847994?v=4"  /> |||
+|[Karahan Yavuz Kara](https://github.com/karahanyavuzkara)| [Emir Cevdet Ünsal](https://github.com/emircevdet)                                  | [Bilge Kurtaslan](https://github.com/wreelds)|[Doruk İskenderoğlu](https://github.com/DorukIskenderoglu)|
+|---|-------------------------------------------------------------------------------------|---|---|
+|| <img height="200px" src="https://avatars.githubusercontent.com/u/145847994?v=4"  /> |||
 
 
 
