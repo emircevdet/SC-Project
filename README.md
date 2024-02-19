@@ -10,7 +10,7 @@ The purpose of this project is to address one of the fundamental challenges face
 
 ## About
 
-<img alt="1" height="900px" src="https://github.com/emircevdet/SC-Project/assets/145847994/272f2b13-81c6-478f-8cfb-70cc686847a7"/>
+![1](https://github.com/emircevdet/SC-Project/assets/145847994/272f2b13-81c6-478f-8cfb-70cc686847a7)
 
 
 ## Contributors
