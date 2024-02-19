@@ -8,7 +8,7 @@ The purpose of this project is to address one of the fundamental challenges face
 
 ## App Photos
 
-## https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUjNdFunK3eUcOhCuv3CHpz2o9Q4eOvdNluQ&usqp=CAU About
+## About
 ![1](https://github.com/emircevdet/SC-Project/assets/145847994/272f2b13-81c6-478f-8cfb-70cc686847a7)
 
 
